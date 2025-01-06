@@ -1,0 +1,29 @@
+These are case sensitive,cannot start with numbers,start with letters
+Reserved words(keywords)not allowed
+Allow letters(under_score)$(dollar sign),numbers
+TYPES: 1.VAR 1995-2015
+       2.LET 2015
+       3.CONST
+
+1)Reassigning variables in possible by var
+2)Reassigning with let also accepted
+3)Reassigning with const not accepted
+
+Identifiers:names
+
+
+Redeclaring with var is Accepted:
+var a=1;
+var a=5;
+document.write(a+a)
+console.log(a+a)
+ 
+O/P:10
+ 
+
+>let a=1;
+ let a=5;
+document.write(a+a)
+console.log(a+a)
+
+O/P:Error
