@@ -1,0 +1,63 @@
+Data Type:
+Dynamic type Language
+Two types:
+1)Primitive DataType-Predefined,we can store ingle values
+a)Numbers:integers,float(a number with decimal point)
+Ex:1,-1,-4.3,5.6
+b)String: Stream of characters enclosed in quotes
+---single,double,backtick quotes;
+c)Boolean:true or false
+d)Null:empty value or no value
+e)undefined:---declared variable with no value
+2)Non-Primitive Data Type:
+
+To check the data type - typeOf
+
+EX:let a='-3.5'
+        let b='-2.5'
+        console.log(typeof(a))
+        document.write(typeof(a))
+        document.write(type(b))
+Output:String
+
+
+EX:let a=3.5
+        let b=2.5
+        console.log("hi  + a+b")
+        console.log('hi +${a + b}')
+        document.write(typeof(a))
+        document.write(typeof(b))
+
+Output:hi  + a+b
+hi +${a + b}
+
+
+
+let a=3.5
+        let b=2.5
+        console.log("hi  + a+b")
+        document.write("hi + a+b","<br>")
+        console.log('hi + a+b ')
+        document.write('hi + a+b ',"<br>")
+        console.log(`hi +${a + b}`)
+        document.write(`hi +${a + b}`,"<br>")
+
+output:hi + a+b
+hi + a+b
+hi +6
+
+let a="Venky"
+        let b="Reddy"
+        let age=19
+        let greeting =`I am ${a+b}, my age is ${age} years old`
+        console.log(greeting)
+
+output:I am VenkyReddy, my age is 19 years old
+
+
+let a="Sai"
+        let b="Kumar"
+    let greeting =`I am ${a+b}`
+    console.log(greeting)
+
+output:I am SaiKumar
