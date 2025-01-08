@@ -1,0 +1,94 @@
+JavaScript operators:
+
+1)Arthimetic operator:
++,-,*,
+Multiplication - (*)
+Division - (/)_Q
+Modulus operator - (%)_R
+Exponential(raised to the power)-**
+++,--
+
+Example:
+  let a=10
+    let b=5
+    b++
+    a--
+    document.write(a,"<br>")
+    document.write(b,"<br>")
+    document.write(a%b,"<br>")
+    document.write(a/b,"<br>")
+    documet.write(a*b,"<br>")
+    document.write(a**b,"<br>")
+
+Output:9
+6
+3
+1.5
+
+2)Assignment Operator:
+3}Logical operators:And(&&),or(||),not(!)
+
+Example:
+let a=10
+    let b=5
+    document.write(a>b && b>11,"<br>")
+    document.write(a>b || b>11,"<br>")
+    document.write(!(true))
+
+Output:false
+true
+false
+
+4)Relational operators:comparing the values
+<,>,>=,<=,==(equality operator),===,!=,!===
+
+Example: let a=105
+    let b='105'
+    document.write(a==b,"<br>")
+    document.write(a===b,"<br>")
+    document.write(a<b,"<br>")
+    document.write(a>b,"<br>")
+    document.write(a>=b,"<br>")
+    document.write(a!=b,"<br>")
+    document.write(a!==b,"<br>")
+
+Output:true
+false
+false
+false
+true
+false
+true
+
+
+5)Conditional operator;Ternary operator(?)
+first evaluates an expression for a true or false
+
+Example:let t=40
+    let r=(t>40) ? "Ac-off":"Ac -on"
+    document.write(r)
+
+Output:Ac -on
+
+
+Window Methods:
+alert()
+prompt()
+confirm()
+alert-  alert("hi Reddy")
+    console.log(alert)
+    document.write(alert)
+Output:hi Reddy
+
+Prompt: let name =prompt("Enter Your Name?")
+    alert(name)
+
+
+Example:let aa=prompt()
+    let bb=prompt()
+    document.write(typeof(aa))
+    console.log(typeof(aa))
+    console.log(aa+bb)
+    document.write(aa+bb)
+
+Output:string43
