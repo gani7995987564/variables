@@ -1,0 +1,45 @@
+	Conditional Statements:
+	To make the set of instructions(block of code)(Conditional bocks) is based on true.
+	Used to decide whether the code has to executed or skip based on the given condition.
+	Block of code : set of instructions
+	It will execute only when the given condition Is true .
+	If the condition is true it will executed
+	If-else 
+	Else if 
+
+//let a=4 
+       //let b=5
+      // if (a>b){
+      ////  document.write("hello gani","<br/>")
+      // }
+       //else{
+     document.write("hello world","<br/>")
+      }
+         
+    Output:
+        hello world	.
+Example 1:
+  // let a=prompt("Enter Your Age:")
+      // let name=prompt("Enter Your name:")
+      // if(a<18){
+     //   document.write(`${name} You are not aligible..`)
+      // }else{
+     //   document.write(`${name} You are aligible...`)
+   //    }
+OUTPUT:
+ You are not aligible
+
+Example 2:
+  let a=prompt("Enter person1 Score:")
+       let b=prompt("Enter person2 Score")
+       let sum=a+b
+       if((a>300 || b>300) && sum>500){
+        document.write("We are aligible for the team up")
+       }else{
+        document.write("We are not aligible to team up")
+       }
+
+Output:
+we are not aligible to team up 
+ 
+
