@@ -1,0 +1,62 @@
+EX: 
+  const a="ramya"
+  for(let i in a){
+  console.log(a[i]);
+ }
+
+Output:r
+a
+m
+y
+a
+
+While Loop:
+ 
+let i=1,n=5;
+while(i<=n){  
+  console.log(i)
+  i=i+1
+}
+
+Output:1
+       2
+       3 
+       4
+       5
+
+
+let i=2,n=8;
+while(i<=n){
+  console.log(i+1)
+  i=i+2
+  }
+
+
+output:3
+       5
+       7
+       9
+
+
+
+
+Do while:
+
+        for(let i=1; i<=8,i=i+1;){
+    if(i==4){
+      break;
+      }console.log(i)
+    }
+    
+
+Output:  2
+         3
+
+
+for(let i=2;i<=8,i=i+2;){
+      if(i>4){
+        break;
+        }console.log(i+1)
+      }
+
+Output:5
