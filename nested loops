@@ -1,0 +1,86 @@
+for(let i=1;i<=8;i=i+2){
+      if(i>5){
+        break;
+        }
+        console.log(i+1)
+    }
+
+
+Output:2
+       4
+       6
+
+   for(let i=1;i<=8;i=i+2){
+      if(i>5){
+        continue
+        }
+        console.log(i+1)
+    }
+
+
+Output:2
+       4
+       6
+
+
+  for(let i=2;i<=8;i=i+1){
+      if(i>5){
+        continue
+        }
+        console.log(i+2)
+    }
+
+Output:4
+       5
+       6
+       7
+
+
+NESTED LOOPS:
+A Loop inside the another loop,the inner loop will execute one time for each iteration of outer loop
+An inner loop within the repeating block of outer loop 
+
+
+  for(let i=1;i<=3;i++){
+    document.write(i,"<br>");
+    for(let j=1;j<=4;j++){
+      document.write(j," ");
+    }
+    document.write("<br>")
+   }
+
+
+Output:1234
+
+
+
+for(let i=1; i<=5; i++){
+        for(let j=1;j<=i;j++){
+          document.write("*")
+        }
+        document.write("<br>")
+      }
+
+
+Output:
+*
+**
+***
+****
+*****
+
+
+for(let i=5; i>=1; i--){
+    for(let j=1;j<=i;j++){
+      document.write("*")
+    }
+    document.write("<br>")
+}
+
+
+Output:
+*****
+****
+***
+**
+*
