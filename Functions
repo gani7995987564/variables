@@ -1,0 +1,66 @@
+Functions:
+
+Function is reusable block of code 
+it can be call any where program
+----Reusable Code:Using an existing code without writing it everytime/where we need
+ you can use the same code with different arguments to get the results
+
+
+PARAMETERS:Values(Variables) which are declared inside the() while defining a functions
+Arguments:Values which are passed through the parameters at the 
+
+
+
+function greet(){
+  console.log("Hello Reddy")
+}
+greet()
+
+
+Output:Hello Reddy
+
+
+function g(name){
+  console.log("Hello "+name)
+}
+let name=prompt("Enter your name?")
+g(name)
+
+
+Output:Hello Venky
+
+
+function add(a,b){
+
+  console.log(7+3)
+}
+add(7,3)
+
+Output:10
+
+
+
+
+function a(aa,bb){
+  return aa+bb;
+}
+let n1=parseFloat(prompt("enter a number1"))//10
+let n2=parseFloat(prompt("enter a number2"))//20
+let result=a(n1,n2);
+console.log("The sum is:"+result)
+
+Output:"The sum is 30"
+
+
+Anonymous Function:
+
+A function without name,After we create a function without name and we assign it to a variable
+Example:
+
+sum=function(n1,n2){
+let r=n1+n2
+return r
+}
+console.log(sum(8,9))
+
+Output:17
