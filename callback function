@@ -1,0 +1,67 @@
+call bACK :
+--YOU CAN pass the call back function 
+as argument to another function 
+execution: the function receiving the callback will execute the callback at some point during its execution 
+EX:
+  function mainFunction(callback){
+  console.log("Executing main function");
+  callback();
+}
+function callbackFunction(){
+  console.log("Callback function executed");
+  }
+  mainFunction(callbackFunction);
+
+O/P:
+Executing main function 
+
+Callback function executed
+
+EXP:
+main function takes a call back 
+
+EX2:
+function greet(name,callback){
+        console.log("HELLO"+ name);
+        callback();
+
+      }
+      function goodbye(){
+        console.log("A VERY GOODBOY!");
+      }
+      greet("GANI",goodbye)
+
+O/P:
+HELLO GANI
+A VERY GOODBOY!
+
+
+EX3; using an anonymous functions as callback;
+function greet(name,callback){
+console.log("hello"+name);
+callback();
+}
+greet("Ganesh",function(){
+console.log("a PYthon Developer");
+})
+o/p:
+Output:hello Ganesh
+ a PYthon Developer
+
+Asynchronous callback with setTimeout;
+code:
+
+function fetchData(callback){
+    console.log("Fetching data...");
+    callback("Data Fetched");
+  }setTimeout(function(){
+    console.log("Data Fetched...");
+  },2000);
+    function processData(){
+      console.log("Processing the fetched data...");
+    }
+  fetchData(processData);
+
+Output:Fetching data...
+ Processing the fetched data...
+ Data Fetched...
