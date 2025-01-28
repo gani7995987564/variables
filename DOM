@@ -1,0 +1,89 @@
+DOM (document object model)
+--it is a programming interface in web development that
+ allows us to interact and manipulate (changes)the html documents 
+when the webpages is loaded, the browser creates the Dom of the webpage
+
+when an html file is loaded into the browser , the JavaScript cannot understand the html  document directly
+
+DOM: is basic representation of same html document but in the  html document 
+
+
+key points:
+1)Structure: The DOM represents the structure of Html document as tree; each node in a tree represents the element ,an attribute, text
+2)Manipulation: using js,you can interact with elements(buttons) we can modify, add ,remove the elements
+3)Event Handling
+4)W3C-World Wide Web Consortium
+
+
+<html>
+<head>
+<title> college </title>
+</head>
+<body>
+<h1> i am in hyd </h1>
+
+
+
+</body>
+
+
+<html>
+ 
+
+--in DOM all html elements are defined objects
+Property : is a value that you can set to the objects
+(like changing content of an html element )
+Method : an action 
+(like add or delete)
+
+
+
+Methods of 
+1) getting an element by id
+2) getting an element by class
+-------returns all the elements having the same class name 
+-------return in the from of html collection object 
+3) getting an element by tagname
+
+
+
+ex:
+<style>
+    h1.b {
+color: blue;
+font-size: 2em;
+}
+
+h1.a {
+color: red;
+font-size: 1.5em;
+}
+
+h1.c {
+color: green;
+font-size: 1.8em;
+}
+
+    
+  </style>
+</head>
+<body>
+    <h1 class="b"> mallesh</h1>
+    <h1 class="a"> venkat</h1>
+    <h1 class="c">ramya</h1>
+    <h1 class=" b"> krishna</h1>
+    <h1 class="a"> gani</h1>
+    <h1 class="c"> ravi </h1>
+</body>
+
+o/p:
+mallesh
+venkat
+ramya
+krishna
+gani
+ravi
+
+
+
+
