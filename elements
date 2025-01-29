@@ -1,0 +1,117 @@
+getElementbyClassName:
+
+returns all the elements having the same class namename
+
+getElementbyClassName() - method returns an HTML collection object
+
+An HTML collection is array like list of html elements
+
+<h1 class="a">Venky</h1>
+    <h1 class="b">Reddy</h1>
+    <h1 class="a">Polu</h1>
+    <script>
+        let x=document.getElementsClassName('a')
+        console.log(x);
+
+
+Output:Venky
+       Reddy
+       Polu
+
+
+
+Getting element by TagName:
+
+getElementbyTagName():
+--this method takes a tag name as string and return an html collection
+
+ <h3 class="a">Venky</h1>
+    <h1 class="b">Reddy</h1>
+    <h2 class="a">Polu</h1>
+    <h1 class="b">Hardik</h1>
+    <script>
+        let x=document.getElementsByTagName('h1')
+        
+
+
+for(let i=0;i<x.length; i++){
+    console.log(x[i])
+}
+
+Output:Venky
+Reddy
+Polu
+Hardik
+
+
+Query Selector:
+
+QuerySelector : used to select Html element by its classname,tagname;it only select the first matching element
+
+<h3 class="a">Venky</h1>
+    <h1 class="b">Reddy</h1>
+    <h2 class="a">Polu</h1>
+    <h1 class="b">Hardik</h1>
+    <script>
+       let x=document.querySelector('h1')
+       console.log(x)
+
+
+Output:<h1 class="b">Reddy</h1>
+queryselector all:can be used to select html elements by its tag name or class name.it returns a nodeList which is an array like object
+
+<h3 class="a">Venky</h1>
+    <h1 class="b">Reddy</h1>
+    <h2 class="a">Polu</h1>
+    <h1 class="b">Hardik</h1>
+    <script>
+       let x=document.querySelectorAll('h1')
+       console.log(x)
+
+Output:NodeList(2) [h1.b, h1.b]
+
+
+Manipulate Elements:
+
+To create a Html element:
+--create element()
+--document.create Element()
+
+let x=document.querySelectorAll('h1')
+       console.log(x)
+       let t=document.createElement('h2')
+       t.className="tt"
+       t.textContent="Hello Reddy"
+       console.log(t)
+
+Output:<h2 class="tt">Hello Reddy</h2>
+--The method takes an html element tag name as string parameter
+
+
+Create a multiple elements:
+const t=["Venky","Reddy","Polu"]
+for(let i=0; i<t.length;i++){
+    let tt=document.createElement('h2')
+    tt.className="aa"
+    tt.textContent=t[i];
+    console.log(tt)
+    
+}
+
+Output:<h2 class="aa">Venky</h2>
+<h2 class="aa">Reddy</h2>
+<h2 class="aa">Polu</h2>
+
+
+let title
+        for(let i=0;i<3;i++){
+            title=document.createElement('h1')
+            title.className="t"
+            title.textContent='i'
+            console.log(title)
+
+        } 
+
+Output:<h1 class="t">i</h1>
+<h1 class="t">i</h1>
+<h1 class="t">i</h1>
