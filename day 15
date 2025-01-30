@@ -1,0 +1,60 @@
+<h1 id=b>i am gani</h1>
+    <h2 class="a">sai</h2>
+    <h3 class="b">ravi</h3>
+    <ul>
+    <li>Ganesh</li>
+    <li>Ravi</li>
+    <li>sam</li>
+    </ul>
+<script>
+    const ul = document.querySelector('ul');
+    const lists = document.querySelectorAll('li');
+    console.log(ul)
+    console.log(lists)
+    for (const list of lists){
+        console.log('removing: ${list.textContent}')
+        ul.removeChild(list)
+        console.log(lists)
+        console.log(list)
+    }
+o/p:
+<ul>​</ul>​
+ NodeList(3) [li, li, li]
+h.html:42 removing: ${list.textContent}
+h.html:44 NodeList(3) [li, li, li]
+h.html:45 <li>​Ganesh​</li>​
+h.html:42 removing: ${list.textContent}
+h.html:44 NodeList(3) [li, li, li]
+h.html:45 <li>​Ravi​</li>​
+h.html:42 removing: ${list.textContent}
+h.html:44 NodeList(3) [li, li, li]
+ <li>​sam​</li>​
+
+
+
+ex:
+ <div id="a">
+        <h1>RAVITEJA</h1>
+        <h1>GANESH</h1>
+    </div>
+    <div id="b">
+        <h1>YASH</h1>
+        <h1>GOPI</h1>
+        <h1>NANI</h1>
+        
+    </div>
+    <script>
+        let n=document.createElement('h1')
+        n.textContent="MALLI"
+        let p=document.getElementById('b')
+        p.appendChild(n)
+        document.write(p.innerText)
+</script>
+o/p:
+RAVITEJA
+GANESH
+YASH
+GOPI
+NANI
+MALLI
+YASH GOPI NANI MALLI
