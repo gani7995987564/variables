@@ -1,0 +1,68 @@
+DoM Methods:
+
+1) create-Element(single,multiple)
+
+
+/head>
+<body>
+    <div id="a">
+    <h1>Ravi</h1>
+    <h1 id="r">Ram</h1>
+</div>
+<div id="b">
+<h2>sam</h2>
+<h2>Venky</h2>
+</div>
+<script>
+let n=document.createElement('h1')
+n.textContent="chiru"
+
+let p=document.getElementById('a')
+let l=document.getElementById('r')
+ p.insertBefore(n,l)
+ console.log(p.innerText)
+ 
+</script>
+
+Output:Ravi
+chiru
+Ram
+sam
+Venky
+
+
+<div id="a">
+    <h1>VENKATESH</h1>
+    <h1>GANESH</h1>
+</div>
+<div id="b">
+    <h1 id="r">RAVI</h1>
+    <h1 >GOPI</h1>
+    <h1>NANI</h1>
+    
+</div>
+<script>
+    let n=document.createElement('h1')
+    n.textContent="MALLI"
+    let p=document.getElementById('b')
+    let l=document.getElementById('r')
+    p.insertBefore(n,l)
+</script>
+
+Output:VENKATESH
+GANESH
+MALLI
+RAVI
+GOPI
+NANI
+
+
+Remove element:
+
+Let b=document.getElementById('a')
+b.remove()
+
+To RemoveChild element:
+
+remove child();
+replace
