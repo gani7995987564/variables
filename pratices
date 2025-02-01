@@ -1,0 +1,34 @@
+let amount=prompt("Enter the amount customer spends")
+        if(amount>100){
+            let discount=amount*0.2
+            let final=amount-discount
+            document.write("The final bill is:"+final)
+        }
+        else if(amount>50 && amount<=100){
+            let discount=amount*0.1
+            let final=amount-discount
+            document.write("The final bill is:"+final)
+        }
+        let customer=confirm("are you premium number?")
+        if(customer){
+            let discount=amount*0.05
+            let final=amount-discount
+            document.write("The final bill is:"+final)
+    
+        }
+
+
+
+ //let age = parseInt(prompt("Enter your age:"))
+        //if(age>=18 ){
+          //  let citizen = confirm("Are you a citizen?")
+        //let passedCitizenTest = confirm("Have you passed citizen test?")
+          //  document.write("You are eligible to vote")
+            
+            //if(age>=18 && !citizen && passedCitizenTest){
+             //   document.write("You are eligible to vote")
+            //}
+            
+        //}else{
+          //  document.write("You are not eligible to vote")
+        //}
