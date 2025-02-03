@@ -1,0 +1,13 @@
+react.js
+
+steps for install node js
+1)DOWNLOAD NODE JS:
+
+COMMAND PROMPT;
+
+--node -v
+-- npm -v
+        -- npx create-react-app my project
+
+         --cd my project
+          --- npm start
