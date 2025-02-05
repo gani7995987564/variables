@@ -1,0 +1,100 @@
+---to create a element in react js
+---React.createElement()
+syntax:
+type=tag name(h1,p,div)
+prop =class,id
+
+ex:
+ <div id="a"> </div>js
+    <script>
+        const b= React.createElement('h1',{id:'c'},"I AM GANI")
+        const e=document.getElementById('a')
+        const root =ReactDOM.createRoot(e)
+        root.render(b)
+    </script>
+o/p:
+I AM GANI
+
+JSX:
+--javascript XML
+--it is a syntax extension for javascript
+----jsx allows us to write html code in react js
+---jsx all the html tags must be closed 
+--Babel is a tool in jsx;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="a"></div>
+    <script type="text/babel">
+        const element=<h1 className="aa">Welcome to Gani IT solutions</h1>
+        const e=document.getElementById('a')
+        const root=ReactDOM.createRoot(e)
+        root.render(element)
+    </script>
+</body>
+</html>
+o/p:
+Welcome to Gani IT solutions
+
+EXPRESSIONS:
+{}
+<script type="text/babel">
+
+        const n=5
+        const m=<h1>React is {n*2} times better than JSX </h1>
+        const e=document.getElementById('a')
+        const root=ReactDOM.createRoot(e)
+        root.render(m)
+    </script>
+o/p:
+React is 10 times better than JSX
+
+Conditional rendering:
+
+
+<div id="root"></div>
+    <script type="text/babel">
+        const App=()=>{
+            const isloggedIN=true;
+            return(
+            <div>
+                {isloggedIN ?(<h1>WELCOME BACK ,USER </h1>):(<h1>PLEASE LOGIN</h1>)}
+                {isloggedIN && <h1>YOU HAVE A NEW NOTIFICATION LOGGED IN</h1>}
+            </div>
+        )
+    }
+        const root=ReactDOM.createRoot(document.getElementById('root'))
+        root.render(<App/>)
+    </script>
+
+o/p:
+WELCOME BACK ,USER
+YOU HAVE A NEW NOTIFICATION LOGGED IN
+
+FUNCTIONS:
+
+Using a function call:
+--you can call fuction call directly with in the jsx function 
+<div id="root"></div>
+    <script type="text/babel">
+        function getGreeting(name){
+        return `Hello, ${name}! WELCOME TO REACT`;
+        }
+        function App(){
+            const name = "GANI";
+            return <h1>{getGreeting(name)}</h1>
+        }
+          
+        const root=ReactDOM.createRoot(document.getElementById('root'))
+        root.render(<App/>)
+    </script>
+o/p:
+Hello, GANI! WELCOME TO REACT
