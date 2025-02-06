@@ -1,0 +1,50 @@
+---Create React app
+#empty folder
+#npx -nope package executor
+npx create-react-my-app
+cd my-app
+npm start
+ 
+project folder:
+
+public/index.html: the main html file that servers as the entry point for the app
+
+scr/index.js: the javacript entry point for the react app where the dom is rendered
+
+scr/app.js: the main components
+
+
+--components:(core building blocks of a react application)
+
+ex:
+--- APP.js:
+
+import React from 'react';
+import './App.css';
+
+const Welcome =()=> <h1 className='message'>HELLO GANI </h1>
+function App(){
+  return (
+    <div className="App">
+      <Welcome />
+      </div>
+      );
+}
+export default App;
+
+--APP.CSS:
+
+.message{
+  color: blue;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  background-color: aquamarine;
+  width: 30%;
+  margin: 80px;
+}
+
+o/p:
+HELLO GANI
+  
