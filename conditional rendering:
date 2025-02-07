@@ -1,0 +1,66 @@
+conditional rendering:
+if, else :
+App.js:
+
+import Greeting from './Greeting';
+
+function App() {
+  const isLoggedIn = true;
+  return (
+    <div className="App">
+      <Greeting isLoggedIn={isLoggedIn} />
+      </div>
+      );
+
+
+--Greeting.js
+
+
+import React from "react";
+
+function Greeting({isLoggedIn}){
+    if(isLoggedIn){
+        return <h1>Welcome back!</h1>;
+        }
+        else{
+            return <h1>Please log in</h1>;
+            }
+            }
+            export default Greeting;
+
+o/p:
+Welcome back!
+
+
+#list and keys:
+In React , a list is collection of items u want to show on screen
+#keys: keys in react help us to keep the track of items in a list 
+---React known which items u have changed ; updated
+
+map(): element in an array
+function will be applied to all elements
+const n=[1,2,3,4,5]
+const d=n.map(num*2)
+console.log
+
+--app.js:
+
+
+const FruitList=()=>{
+  const fruits=['apple','banana','cherry'];
+  return(
+    <div>
+      <h1>Fruits List</h1>
+      <ul>
+        {fruits.map((fruit,index)=>
+        <li key={index}>{fruit}</li>
+        )}
+      </ul>
+    </div>
+    );
+}
+o/p:
+Fruits List
+apple
+banana
+cherry
