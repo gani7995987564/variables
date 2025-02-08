@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light Simulation</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #2c3e50;
+            transition: background-color 0.5s ease;
+        }
+        .traffic-light {
+            width: 120px;
+            height: 300px;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .light {
+            width: 60px;
+            height: 60px;
+            background-color: grey;
+            border-radius: 50%;
+            transition: background-color 0.5s ease;
+        }
+        .button {
+            font-size: 16px;
+            margin-top: 20px;
+            padding: 15px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="traffic-light">
+        <div class="light" id="redLight"></div>
+        <div class="light" id="yellowLight"></div>
+        <div class="light" id="greenLight"></div>
+    </div>
+    <button class="button" id="toggleButton" onclick="changeLight()">Next</button>
+
+    <script>
+        let currentLight = 0;
+        
+        function changeLight() {
+            const redLight = document.getElementById("redLight");
+            const yellowLight = document.getElementById("yellowLight");
+            const greenLight = document.getElementById("greenLight");
+
+            // Reset all lights to grey
+            redLight.style.backgroundColor = "grey";
+            yellowLight.style.backgroundColor = "grey";
+            greenLight.style.backgroundColor = "grey";
+
+            // Cycle through the traffic lights
+            if (currentLight === 0) {
+                redLight.style.backgroundColor = "red";
+                currentLight = 1;
+            } else if (currentLight === 1) {
+                yellowLight.style.backgroundColor = "yellow";
+                currentLight = 2;
+            } else {
+                greenLight.style.backgroundColor = "green";
+                currentLight = 0;
+            }
+        }
+    </script>
+</body>
+</html>
+state:
+
+State in react:
+in react,state is a like a container that holds the data or information for a component
+
+Syntax:
+const[statevariable,setstatefunction]=useState(initial value)
+1)stateVariable:holds the current state(ex:name,colour)
+2)setStatefunction:used to update the state function
+3)initial value:The initial value of the state variable when the component first renders
