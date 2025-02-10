@@ -1,0 +1,121 @@
+state:
+
+State in react:allows comonents to be dynamic,interactive and capable of responding to the user. 
+in react,state is a like a container that holds the data or information for a component
+
+Syntax:
+const[statevariable,setstatefunction]=useState(initial value)
+1)stateVariable:holds the current state(ex:name,colour)
+2)setStatefunction:used to update the state function
+3)initial value:The initial value of the state variable when the component first renders
+
+UseStateHook:
+
+UseState allows you to add state to functional components
+Syntax:
+const[state,setstate]=usestate(initial value)
+state:This is current state
+setstate:This is a function to update the state
+initial value:The value you want 
+
+
+import React,{useState} from 'react';
+const Counter=()=>{
+  const[count,setCount]=useState(10);
+  //setcount=update the function
+  //count -current state
+  //use state(initial value=10)
+  return(
+    <div>
+      <h1>{count}</h1>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+      <button onClick={()=>setCount(count-1)}>Decrement</button>
+    </div>
+    )
+}
+export default Counter;
+
+// import React, { useState } from "react";
+
+// const Counter = () => {
+//   const [count, setCount] = useState(10);
+
+//   // Inline Styles
+//   const styles = {
+//     container: {
+//       textAlign: "center",
+//       background: "linear-gradient(135deg, #f3a683, #786fa6)",
+//       padding: "40px",
+//       borderRadius: "15px",
+//       maxWidth: "300px",
+//       margin: "50px auto",
+//       boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+//     },
+//     counterValue: {
+//       fontSize: "48px",
+//       fontWeight: "bold",
+//       color: "white",
+//       marginBottom: "20px",
+//     },
+//     buttonGroup: {
+//       display: "flex",
+//       justifyContent: "center",
+//       gap: "15px",
+//     },
+//     button: {
+//       padding: "12px 20px",
+//       fontSize: "18px",
+//       fontWeight: "bold",
+//       border: "none",
+//       borderRadius: "8px",
+//       cursor: "pointer",
+//       transition: "all 0.3s ease",
+//     },
+//     increment: {
+//       backgroundColor: "#38a169",
+//       color: "white",
+//     },
+//     decrement: {
+//       backgroundColor: "#e53e3e",
+//       color: "white",
+//     },
+//   };
+
+//   return (
+//     <div style={styles.container}>
+//       <h1 style={styles.counterValue}>{count}</h1>
+//       <div style={styles.buttonGroup}>
+//         <button
+//           style={{ ...styles.button, ...styles.increment }}
+//           onClick={() => setCount(count + 1)}
+//         >
+//           Increment
+//         </button>
+//         <button
+//           style={{ ...styles.button, ...styles.decrement }}
+//           onClick={() => setCount(count - 1)}
+//         >
+//           Decrement
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Counter;
+
+import React,{useState}from 'react';
+const ThemeToggler=()=>{
+  const [theme, setTheme] = useState('light')
+
+  const toggleTheme=()=>{
+    setTheme(prevtheme=>(prevtheme==='light'?'dark':'light'))
+  }
+  return (
+    <div style={{backgroundColor:theme==='light'?'white':'black',color:theme==="light"?'black':'white',textAlign:'center'}}>
+      <h1>The current theme is {theme}</h1>
+      <button onClick={toggleTheme}>Toggle Theme</button>
+    </div>
+    );
+}
+export default ThemeToggler;
