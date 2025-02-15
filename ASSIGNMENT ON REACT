@@ -1,0 +1,149 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main App Container */
+.app-container {
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Title */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background: -webkit-linear-gradient(45deg, #ff9a9e, #fad0c4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Input & Add Button */
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.add-button {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.add-button:hover {
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  transform: scale(1.05);
+}
+
+/* Item List */
+.card {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  margin: 8px 0;
+  transition: 0.3s ease-in-out;
+}
+
+.list-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.remove-button {
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.remove-button:hover {
+  background: linear-gradient(to right, #dd2476, #ff512f);
+  transform: scale(1.1);
+}
+
+/* Clear Button */
+.clear-button {
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s ease;
+}
+
+.clear-button:hover {
+  background: linear-gradient(to right, #fad0c4, #ff9a9e);
+  transform: scale(1.05);
+}
