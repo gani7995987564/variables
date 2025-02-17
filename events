@@ -1,0 +1,105 @@
+event handling in react:
+---Event handling in react is how u make ur app do some thing 
+when the user interacts with it, like clicking a button,submitting .
+----HOW to use events in react:
+--Use camelCase for the name.
+--pass a function to the event (not to a function call).      
+
+                  
+/ function App(){
+//   const handleClick=()=>{
+//     alert("Button Clicked");
+//   };
+//   return (
+//     <button onClick={handleClick}>Click Me</button>
+//   )
+// }
+// export default App;
+
+
+b.change event (onchange);
+forms:
+This happens when u type in a text box
+key points:
+target is a property of the event object, and is predefined by javascript for DOM events
+
+import React,{useState} from "react";
+import "./App.css";
+function App(){
+  const [text ,setText]=useState("");
+  //intially the vaule is set as empty string
+  const handleChange=(event)=>{
+    setText(event.target.value);
+    //update the text state with the value input field
+    }
+    return(
+      <div>
+      <input type="text" value={text} onChange={handleChange} />
+      <p>YOUR TEXT:{text}</p>
+      </div>
+    )
+    
+  }
+  export default App;
+O/P:
+YOUR TEXT:
+
+c.MOuse events:
+
+import React, { useState } from 'react';
+import './App.css';
+
+function App() {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  return (
+    <div className="container">
+      <button
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          backgroundColor: isHovered ? 'yellow' : 'pink',
+        }}
+        className={isHovered ? 'button hovered' : 'button'}
+      >
+        Hover Me
+      </button>
+      {isHovered && <p className="text">Mouse is over the button</p>}
+    </div>
+  );
+}
+
+export default App;
+O/P:
+Hover Me
+Mouse is over the button
+
+KEY EVENTS:
+
+import React, { useState } from 'react';
+import './App.css';
+function App() {
+  const [key , setKey] = useState="";
+  const handleKeyDown=(event)=>{
+
+  }
+  return(
+    <div className="app">
+      <h1> WELCOME TO GANI IT SOLUTIONS</h1>
+    {key && <h2> you pressed {key}</h2>}
+    <input type ="text" onKeyDown={handleKeyDown} placeholder='' />
+    </div>
+  )
+  }
+  export default App;
+
+O/P:
+WELCOME TO GANI IT SOLUTIONS
