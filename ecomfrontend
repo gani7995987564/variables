@@ -1,0 +1,70 @@
+import { useEffect, useState } from "react";
+import axios from "axios"; 
+
+const Mobiles = () => {
+    const [mobiles, setMobiles] = useState([]); 
+    const getMobiles = async () => {
+        try {
+            const result = await axios.get("YOUR_API_URL_HERE"); 
+            setMobiles(result.data); 
+        } catch (error) {
+            console.error("Error fetching mobiles:", error);
+        }
+    };
+
+    useEffect(() => {
+        getMobiles();
+    }, []);
+
+    return (
+        <div className="parent"> 
+            {mobiles.map((element, index) => ( 
+                <div className="child" key={index}> 
+                    <h1>{element.pqty}</h1>
+                    <h4>{element.pname}</h4>
+                    <h4>{element.pcost}</h4>
+                </div>
+            ))}
+        </div>
+    );
+};
+
+export default Mobiles;
+css
+
+.parent.parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.child {
+  width: 250px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.child h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.child h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+import Mobiles from './components/Mobiles.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <Mobiles></Mobiles>,
+)
